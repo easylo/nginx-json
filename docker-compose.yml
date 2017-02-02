@@ -1,0 +1,16 @@
+version: '2'
+services:
+
+  nginx:
+    image: laurentrichard/nginx-json
+    # build: .
+    ports:
+      - 8080:80
+    environment:
+      NGINX_LISTEN: 80
+    #   NGINX_SERVER_NAME: _
+    #   NGINX_LOCATION: /
+    #   NGINX_AUTH_BASIC: 1
+    #   NGINX_AUTH_BASIC_FILE: "/etc/nginx/.htpasswd"
+    volumes:
+      - ./data:/var/www/html
