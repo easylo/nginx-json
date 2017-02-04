@@ -19,6 +19,6 @@ then
     "
 fi
 
-envsubst < /default.conf > /etc/nginx/conf.d/default.conf
+envsubst < /default.conf > /etc/nginx/sites-enabled/default.conf
 
 exit $?
