@@ -70,7 +70,7 @@ COPY default.conf /default.conf
 COPY nginx.conf /etc/nginx/nginx.conf
 
 # Define mountable directories.
-VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log", "/var/www/html"]
+# VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log"]
 
 EXPOSE 80 443
 
