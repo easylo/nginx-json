@@ -69,7 +69,7 @@ RUN chmod a+x -R /etc/supervisor/conf.d/scripts/
 COPY default.conf /default.conf
 COPY nginx.conf /etc/nginx/nginx.conf
 
-RUN mkdir -p /var/www/html/
+RUN mkdir -p /var/www/html /etc/nginx/sites-enabled
 
 # Define mountable directories.
 # VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log"]
