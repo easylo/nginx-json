@@ -8,7 +8,7 @@ COPY nginx-json-log-module /nginx-json-log-module
 
 RUN apt-get update --fix-missing
 RUN apt-get upgrade -y
-RUN apt-get -y install build-essential zlib1g-dev libpcre3 libpcre3-dev libbz2-dev libssl-dev tar unzip wget curl libjansson-dev openssh gettext supervisor
+RUN apt-get -y install build-essential zlib1g-dev libpcre3 libpcre3-dev libbz2-dev libssl-dev tar unzip wget curl libjansson-dev openssh-server gettext supervisor
 
 RUN mkdir -p /usr/src && \
     curl -fSL http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz -o nginx.tar.gz && \
