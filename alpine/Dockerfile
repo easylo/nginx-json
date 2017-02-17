@@ -4,7 +4,7 @@ MAINTAINER Laurent RICHARD "easylo@gmail.com"
 
 ENV NGINX_VERSION 1.11.9
 
-COPY nginx-json-log-module /nginx-json-log-module
+COPY ../nginx-json-log-module /nginx-json-log-module
 
 RUN apk add --no-cache --virtual .build-deps \
       gcc \
@@ -63,11 +63,11 @@ RUN mkdir -p /usr/src && \
 # COPY supervisor conf
 # RUN mkdir -p /data/logs/supervisor
 # RUN touch /data/logs/supervisor/ngnix.log
-COPY supervisor/ /etc/supervisor/conf.d/
+COPY ../supervisor/ /etc/supervisor/conf.d/
 RUN chmod a+x -R /etc/supervisor/conf.d/scripts/
 
-COPY default.conf /default.conf
-COPY nginx.conf /etc/nginx/nginx.conf
+COPY ../default.conf /default.conf
+COPY ../nginx.conf /etc/nginx/nginx.conf
 
 RUN mkdir -p /var/www/html /etc/nginx/sites-enabled
 
