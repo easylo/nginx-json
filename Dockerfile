@@ -36,6 +36,7 @@ RUN mkdir -p /usr/src && \
     cd /usr/src/nginx-$NGINX_VERSION && \
     mv  /nginx-json-log-module . && \
     ./configure --with-http_ssl_module \
+        --with-http_v2_module \
         --add-module=nginx-json-log-module \
         --prefix=/etc/nginx \
         --error-log-path=/var/log/nginx/error.log \
