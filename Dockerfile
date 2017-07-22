@@ -1,8 +1,8 @@
-FROM alpine:3.5
+FROM alpine:3.6
 
 MAINTAINER Laurent RICHARD "easylo@gmail.com"
 
-ENV NGINX_VERSION 1.11.9
+ENV NGINX_VERSION 1.13.3
 
 COPY nginx-json-log-module /nginx-json-log-module
 
