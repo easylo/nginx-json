@@ -11,6 +11,8 @@ export NGINX_AUTH_BASIC=${NGINX_AUTH_BASIC:=0}
 export NGINX_AUTH_BASIC_FILE=${NGINX_AUTH_BASIC_FILE:='/etc/nginx/.htpasswd'}
 export NGINX_DNS_RESOLVER=${NGINX_DNS_RESOLVER:="127.0.0.1"}
 
+export NGINX_DEFAULT_PATH=${NGINX_DEFAULT_PATH:="/default.conf"}
+
 if [ $NGINX_AUTH_BASIC = "1" ]
 then
   export NGINX_AUTH_BASIC_content="
@@ -19,6 +21,6 @@ then
     "
 fi
 
-envsubst < /default.conf > /etc/nginx/sites-enabled/default.conf
+envsubst < $NGINX_DEFAULT_PATH > /etc/nginx/sites-enabled/default.conf
 
 exit $?
